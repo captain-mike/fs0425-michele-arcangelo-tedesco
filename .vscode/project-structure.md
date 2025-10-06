@@ -1,0 +1,79 @@
+# Project Structure
+
+This file maintains an up-to-date list of project files and structure.
+
+## File Structure
+
+- 📁 `.vscode/`
+  - 📄 `.vscode\project-structure.md` (Markdown)
+- 📁 `L1/`
+  - 📁 `L1\.vscode/`
+    - 📄 `L1\.vscode\project-structure.md` (Markdown)
+  - 📁 `L1\didupdate/`
+    - 📁 `L1\didupdate\.vscode/`
+      - 📄 `L1\didupdate\.vscode\project-structure.md` (Markdown)
+    - 📁 `L1\didupdate\public/`
+      - 📄 `L1\didupdate\public\vite.svg` (Unknown)
+    - 📁 `L1\didupdate\src/`
+      - 📁 `L1\didupdate\src\assets/`
+        - 📄 `L1\didupdate\src\assets\react.svg` (Unknown)
+      - 📁 `L1\didupdate\src\components/`
+        - 📄 `L1\didupdate\src\components\ChildComponent.jsx` (React)
+          - *Imports:* `react`
+          - *Exports:* `ChildComponent`
+      - 📄 `L1\didupdate\src\App.css` (CSS)
+      - 📄 `L1\didupdate\src\App.jsx` (React)
+        - *Imports:* `react`, `./components/ChildComponent`, `./App.css`
+      - 📄 `L1\didupdate\src\index.css` (CSS)
+      - 📄 `L1\didupdate\src\main.jsx` (React)
+        - *Imports:* `react`, `react-dom/client`, `./index.css`, `./App.jsx`
+    - 📄 `L1\didupdate\.gitignore` (Unknown)
+    - 📄 `L1\didupdate\eslint.config.js` (JavaScript)
+      - *Imports:* `@eslint/js`, `globals`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`, `eslint/config`
+    - 📄 `L1\didupdate\index.html` (HTML)
+    - 📄 `L1\didupdate\package-lock.json` (JSON)
+    - 📄 `L1\didupdate\package.json` (JSON)
+    - 📄 `L1\didupdate\README.md` (Markdown)
+    - 📄 `L1\didupdate\vite.config.js` (JavaScript)
+      - *Imports:* `vite`, `@vitejs/plugin-react`
+  - 📁 `L1\elevare-stato/`
+    - 📁 `L1\elevare-stato\.vscode/`
+      - 📄 `L1\elevare-stato\.vscode\project-structure.md` (Markdown)
+    - 📁 `L1\elevare-stato\public/`
+      - 📄 `L1\elevare-stato\public\vite.svg` (Unknown)
+    - 📁 `L1\elevare-stato\src/`
+      - 📁 `L1\elevare-stato\src\assets/`
+        - 📄 `L1\elevare-stato\src\assets\react.svg` (Unknown)
+      - 📁 `L1\elevare-stato\src\components/`
+        - 📄 `L1\elevare-stato\src\components\CrudPizze.jsx` (React)
+          - *Imports:* `react`, `react-bootstrap`, `./PizzaForm`, `./PizzaList`, `../data/pizzas.json`
+          - *Exports:* `CrudPizze`
+        - 📄 `L1\elevare-stato\src\components\PizzaForm.jsx` (React)
+          - *Imports:* `react`, `react-bootstrap`
+          - *Exports:* `PizzaForm`
+        - 📄 `L1\elevare-stato\src\components\PizzaItem.jsx` (React)
+          - *Imports:* `react`, `react-bootstrap`
+          - *Exports:* `PizzaItem`
+        - 📄 `L1\elevare-stato\src\components\PizzaList.jsx` (React)
+          - *Imports:* `react`, `react-bootstrap`, `./PizzaItem`
+          - *Exports:* `PizzaList`
+      - 📁 `L1\elevare-stato\src\data/`
+        - 📄 `L1\elevare-stato\src\data\pizzas.json` (JSON)
+      - 📄 `L1\elevare-stato\src\App.css` (CSS)
+      - 📄 `L1\elevare-stato\src\App.jsx` (React)
+        - *Imports:* `./App.css`, `./components/CrudPizze`, `react-bootstrap`
+      - 📄 `L1\elevare-stato\src\index.css` (CSS)
+      - 📄 `L1\elevare-stato\src\main.jsx` (React)
+        - *Imports:* `react`, `react-dom/client`, `bootstrap/dist/css/bootstrap.min.css`, `./index.css`, `./App.jsx`
+    - 📄 `L1\elevare-stato\.gitignore` (Unknown)
+    - 📄 `L1\elevare-stato\eslint.config.js` (JavaScript)
+      - *Imports:* `@eslint/js`, `globals`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`, `eslint/config`
+    - 📄 `L1\elevare-stato\index.html` (HTML)
+    - 📄 `L1\elevare-stato\package-lock.json` (JSON)
+    - 📄 `L1\elevare-stato\package.json` (JSON)
+    - 📄 `L1\elevare-stato\README.md` (Markdown)
+    - 📄 `L1\elevare-stato\vite.config.js` (JavaScript)
+      - *Imports:* `vite`, `@vitejs/plugin-react`
+
+---
+Last updated: 2025-10-06T11:17:07.367Z
