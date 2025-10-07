@@ -15,7 +15,7 @@ export default class PizzaItem extends Component {
 
                     </div>
                     <Badge bg="primary" className="fs-6">
-                        € {pizza.prezzo.toFixed(2)}
+                        € {pizza.prezzo}
                     </Badge>
                 </Card.Header>
 

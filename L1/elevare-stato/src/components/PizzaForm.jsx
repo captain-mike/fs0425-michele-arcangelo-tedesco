@@ -13,7 +13,7 @@ export default class PizzaForm extends Component {
 
   componentDidUpdate(prevProps){
 
-    if( 
+    if( this.props.editingPizza &&
       prevProps.editingPizza?.id !== this.props.editingPizza?.id  
     ){
         this.setState({
@@ -23,6 +23,10 @@ export default class PizzaForm extends Component {
         });
     }
 
+      // Se abbiamo smesso di modificare
+    if (!this.props.editingPizza && prevProps.editingPizza) {
+      // this.resetForm()
+    }
   }
 
   handleInputChange = (e) =>{
@@ -33,8 +37,42 @@ export default class PizzaForm extends Component {
     })
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault()
+    
+    const { gusto, prezzo, disponibile } = this.state
+    
+    // Validazione necessaria
+   
+    const pizzaData = {
+      gusto: gusto.trim(),
+      prezzo: parseInt(prezzo),
+      disponibile: disponibile
+    }
 
+    if (this.props.editingPizza) {
+      // Modalità modifica
+      this.props.onUpdatePizza({
+        ...pizzaData,
+        id: this.props.editingPizza.id
+      })
+    } else {
+      // Modalità aggiunta
+      this.props.onAddPizza(pizzaData)
+      this.resetForm()
+    }
+  }
+
+  resetForm = () => {
+    this.setState({
+      gusto: '',
+      prezzo: '',
+      disponibile: true
+    })
+  }
+
+  handleCancel = () => {
+    this.props.onCancelEdit()
   }
 
   render() {
@@ -59,7 +97,6 @@ export default class PizzaForm extends Component {
                 value={gusto}
                 onChange={this.handleInputChange}
                 placeholder="Es: Margherita"
-                required
               />
             </Form.Group>
 
@@ -71,7 +108,6 @@ export default class PizzaForm extends Component {
                 value={prezzo}
                 onChange={this.handleInputChange}
                 placeholder="Es: 8.50"
-                required
               />
             </Form.Group>
 
@@ -91,24 +127,27 @@ export default class PizzaForm extends Component {
                   type="submit"
                   variant="primary"
                   className="w-100 mb-2"
+                  onClick={this.handleCancel}
                 >
                   {editingPizza ? 'Modifica' : 'Crea'}
                 </Button>
               </Col>
             </Row>
 
-            <Row>
-              <Col>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="w-100"
-                  onClick={this.handleCancel}
-                >
-                  Annulla
-                </Button>
-              </Col>
-            </Row>
+            {editingPizza && (
+              <Row>
+                <Col>
+                  <Button 
+                    type="button" 
+                    variant="secondary"
+                    className="w-100"
+                    onClick={this.handleCancel}
+                  >
+                    Annulla
+                  </Button>
+                </Col>
+              </Row>
+            )}
 
           </Form>
         </Card.Body>

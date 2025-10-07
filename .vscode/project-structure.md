@@ -74,6 +74,19 @@ This file maintains an up-to-date list of project files and structure.
     - 📄 `L1\elevare-stato\README.md` (Markdown)
     - 📄 `L1\elevare-stato\vite.config.js` (JavaScript)
       - *Imports:* `vite`, `@vitejs/plugin-react`
+  - 📁 `L1\esempi-ts/`
+    - 📄 `L1\esempi-ts\index.d.ts` (TypeScript)
+    - 📄 `L1\esempi-ts\index.d.ts.map` (Unknown)
+    - 📄 `L1\esempi-ts\index.js` (JavaScript)
+    - 📄 `L1\esempi-ts\index.js.map` (Unknown)
+    - 📄 `L1\esempi-ts\index.ts` (TypeScript)
+    - 📄 `L1\esempi-ts\package-lock.json` (JSON)
+    - 📄 `L1\esempi-ts\package.json` (JSON)
+    - 📄 `L1\esempi-ts\tsconfig.json` (JSON)
+- 📁 `L2/`
+  - 📁 `L2\.vscode/`
+    - 📄 `L2\.vscode\project-structure.md` (Markdown)
+- 📄 `.gitignore` (Unknown)
 
 ---
-Last updated: 2025-10-06T11:17:07.367Z
+Last updated: 2025-10-07T07:05:05.801Z

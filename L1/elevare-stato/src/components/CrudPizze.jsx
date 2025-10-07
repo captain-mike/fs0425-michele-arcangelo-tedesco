@@ -61,6 +61,7 @@ export default class CrudPizze extends Component {
           <Col lg={4} className="mb-4">
             <PizzaForm 
             editingPizza={this.state.editingPizza}
+            onUpdatePizza={this.updatePizza}
             onCancelEdit={this.cancelEdit}
             onAddPizza={this.addPizza}
             />
