@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function saluto(){
+            console.log('ciao');            
+        }
+
+        function restituisciSaluto(){
+            return 'funzione restituisciSaluto';
+        }
+
+        saluto()
+
+        const s = restituisciSaluto();
+        // console.log(s);
+
+        // console.log(restituisciSaluto) //istruzioni della funzione
+        // console.log(restituisciSaluto()) //return della funzione
+
+
+        const fn = function(){
+            return 'funzione fn'
+        }
+
+        // console.log(fn);
+        // console.log(fn());
+
+
+        //closure
+
+
+
+        function genitore(){
+            let a = 0;
+            
+            function figlio(){
+                console.log(a)//0
+                // let b = 0;
+            }
+            figlio()
+            
+            // console.log(b)//errore
+        }
+
+
+        // genitore()
+
+
+        //self invoked
+
+        (function(){
+            console.log('self invoked');
+        })()
+
+        
+        
+        function a(x){
+
+            return function b(y){
+
+                return function c(z){
+                    return x + y + z
+                } 
+            }
+        }
+
+        console.log(  a(2)(5)(8)  );
+
+
+        const f1 = a(2)
+        const f2 = f1(5)
+        const f3 = f2(8)
+        
+
+
+    </script>
+
+</body>
+</html>
