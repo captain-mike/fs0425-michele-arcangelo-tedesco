@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const numeri = [1,2,3,4,5,6];
+
+       numeri.forEach(n =>{
+            const div = document.createElement('div')
+            div.innerHTML = `<div>${n}</div>`  
+            document.body.append(div)         
+        })
+        
+        const raddoppiati = numeri.map( n => {
+            return n * 2     
+        })
+        
+        console.log(raddoppiati);
+        
+
+        const triplicati = [];
+        numeri.forEach(n => {
+            triplicati.push(n*3)
+        })
+
+
+    </script>
+
+</body>
+</html>
