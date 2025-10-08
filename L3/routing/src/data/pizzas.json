@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "gusto": "Margherita",
+    "prezzo": 8.50,
+    "disponibile": true
+  },
+  {
+    "id": 2,
+    "gusto": "Marinara",
+    "prezzo": 7.00,
+    "disponibile": true
+  },
+  {
+    "id": 3,
+    "gusto": "Quattro Stagioni",
+    "prezzo": 12.00,
+    "disponibile": true
+  },
+  {
+    "id": 4,
+    "gusto": "Diavola",
+    "prezzo": 1,
+    "disponibile": false
+  },
+  {
+    "id": 5,
+    "gusto": "Capricciosa",
+    "prezzo": 11.00,
+    "disponibile": true
+  }
+]
