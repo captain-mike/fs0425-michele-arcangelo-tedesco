@@ -13,7 +13,7 @@ describe('Home component', ()=>{
         const button = screen.getByTestId('toggle')
         fireEvent.click(button)
 
-        const fade = screen.queryByTestId('fade')
+        const fade = screen.queryByTestId('fade')//query per testare assenza di elementi
 
         expect(fade).not.toBeInTheDocument()
 
