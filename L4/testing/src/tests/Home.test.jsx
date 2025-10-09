@@ -6,14 +6,14 @@ import App from '../App';
 
 describe('Home component', ()=>{
 
-    it('hides specific element when button clicked', async ()=>{
+    it('hides specific element when button clicked', ()=>{
 
         render(<App/>)
 
         const button = screen.getByTestId('toggle')
         fireEvent.click(button)
 
-        const fade = await screen.findByTestId('fade')
+        const fade = screen.queryByTestId('fade')
 
         expect(fade).not.toBeInTheDocument()
 
