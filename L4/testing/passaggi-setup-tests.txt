@@ -1,0 +1,9 @@
+Prima di tutto Dovrai installare tutte le dipendenze 
+npm i -D jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event vitest
+
+Successivamente:
+
+-crea la cartella tests
+-crea il file setup.js dentro la cartella tests appena creata
+-aggiungi al vite.config.js la configurazione per i test
+-aggiungi il comando "test" : "vitest" in package.json 

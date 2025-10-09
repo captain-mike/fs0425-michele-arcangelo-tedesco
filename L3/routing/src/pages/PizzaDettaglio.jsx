@@ -1,18 +1,17 @@
 import pizze from '../data/pizzas.json'
-import { useParams, Navigate } from 'react-router';
+import { useParams } from 'react-router';
 
-const getPizzaById = (id)=> {
-  return pizze.find(p => p.id ===  parseInt(id))
+const getPizzaById = (id)=>{
+  return pizze.find(p => {
+    p.id == id
+  })
 }
-
 const PizzaDettaglio = () => {
 
   const { id } = useParams()
-  const pizza = getPizzaById(id)
+  const { pizza } = getPizzaById(id)
+ 
 
-  if(!pizza){
-    return <Navigate to="/" replace/>
-  }
 
   return (
     <div>

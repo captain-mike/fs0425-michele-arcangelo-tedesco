@@ -8,7 +8,7 @@ const NotFound = ({hasHeader}) => {
 
   useEffect(()=>{
 
-    hasHeader(false)
+    hasHeader()
 
     const timer = setInterval(()=>{
       
